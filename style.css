@@ -1,0 +1,21 @@
+.bg-lightbrown {
+    background-color: #D2B48C; 
+    color: #000000; 
+   
+}
+.titulo {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+.nav-custom {
+    display: flex;
+    justify-content: center;
+}
+.nav-link {
+    color: #333;
+}
+.nav-link:hover {
+    text-decoration: none;
+}
