@@ -1,0 +1,109 @@
+.bg-lightbrown {
+    background-color: #D2B48C; 
+    color: #000000; 
+   
+}
+.titulo {
+    font-size: 46px;
+    color: #333;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.subtitulo {
+    font-size: 28px;
+    font-family:'Cedarville Cursive', cursive;
+}
+
+.nav-custom {
+    display: flex;
+    justify-content: center;
+}
+.nav-link {
+    color: #333;
+}
+.nav-link:hover {
+    text-decoration: none;
+}
+
+.divisor {
+    color: grey;
+    width: 18%;
+    margin: 6px auto !important;
+}
+
+.seccion {
+    text-align: left;
+    padding-bottom: 23px;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+
+.form-row { 
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+        
+}
+
+
+
+.center-form {
+    width: 100%; 
+    margin: 0 auto; 
+    display: block;
+}
+
+.required {
+    color: red; 
+    display: inline-block; 
+    margin-left: 5px; 
+    vertical-align: middle; 
+}
+
+input[type="text"],
+
+input[type="email"],
+textarea {
+  width: 100%;
+  margin: 1px 0px 1px 0px;
+  padding: 2px 6px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid burlywood;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #d1a573;
+  color: white;
+  cursor: pointer;
+    
+}
+
+
+input[type="submit"]:hover {
+    background-color:brown;
+    
+}
+
+ 
+ 
+
+  /* Estilos responsivos */
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+  
+    header,
+    section,
+    footer {
+      padding: 10px;
+    }
+  }
