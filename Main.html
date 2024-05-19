@@ -23,6 +23,9 @@
                 <a class="nav-link active" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link" href="#Productos">Productos</a>
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="#">Nosotros</a>
                 </li>
                 <li class="nav-item">
@@ -34,40 +37,94 @@
     </nav>
     <header class=" header-custom p-3">
         <h1 class="titulo">ESTILO VIVO</h1> <hr class="divisor"><h2 class="subtitulo titulo">Muebles de diseño</h2>
-        <section></section>
-        <section></section>
-        <section id="Contacto">
-            <h3 class="seccion"> Contactanos! </h3>
-            <form action="#" method="post">
-                <div class="form-row">
-                    <div class="col-4">
-                    <label for="nombre">Nombre y Apellido<span class="required">*</span></label>
-                    <input type="text" id="nombre" name="nombre" required></div>
+    </header>  
+    <section id="Productos">
+        <h2 id="titulo-lista">Lista de Productos</h2>
+        <div class="contenedor">
+            <div class="card">
+                <div class="imagen">
+                    <a href="./productos/producto1.html">
+                        <img src="./img/Producto 1/01.jpg" alt="">
+                        <img src="./img/Producto 1/02.jpg" alt="">
+                    </a>
                 </div>
-
-                <div class="form-row">
-                    <div class="col-4">
-                    <label for="correo" required>Correo electrónico<span class="required">*</span></label>
-                    <input type="email" id="correo" name="correo" required></div>
+                <p class="titulo-producto">Armario blanco con ropero y estantes ANTONIN</p>
+                <p class="precio">$ 554.000</p>
+            </div>
+            <div class="card">
+                <div class="imagen">
+                    <a href="./productos/producto2.html">
+                        <img src="./img/Producto 2/01.jpg" alt="">
+                        <img src="./img/Producto 2/02.jpg" alt="">
+                    </a>
                 </div>
-
-                <div class="form-row">
-                    <div class="col-4">
-                    <label for="asunto" required>Asunto<span class="required">*</span></label>
-                    <input type="text" id="asunto" name="asunto" required></div>
+                <p class="titulo-producto">Armario industrail mango INDUSTRIA</p>
+                <p class="precio">$ 872.000</p>
+            </div>
+            <div class="card">
+                <div class="imagen">
+                    <a href="./productos/producto3.html">
+                        <img src="./img/Producto 3/01.jpg" alt="">
+                        <img src="./img/Producto 3/02.jpg" alt="">
+                    </a>
                 </div>
-
-                <div class="form-row">
-                    <div class="col-4">
-                    <label for="mensaje" required>Mensaje<span class="required">*</span></label>
-                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Hola, Estilo Vivo Muebles! Les quiero consultar por ..."></textarea
-                    ></div>
+                <p class="titulo-producto">Armario colgador nórdico blanco y madera clara KELMA</p>
+                <p class="precio">$ 663.000</p>
+            </div>
+            <div class="card">
+                <div class="imagen">
+                    <a href="./productos/producto4.html">
+                        <img src="./img/Producto 4/01.jpg" alt="">
+                        <img src="./img/Producto 4/02.jpg" alt="">
+                    </a>
                 </div>
+                <p class="titulo-producto">Armario nórdico acabado roble claro MAHE</p>
+                <p class="precio">$ 790.000</p>
+            </div>
+            <div class="card">
+                <div class="imagen">
+                    <a href="./productos/producto5.html">
+                        <img src="./img/Producto 5/01.jpg" alt="">
+                        <img src="./img/Producto 5/02.jpg" alt="">
+                    </a>
+                </div>
+                <p class="titulo-producto">Armario nórdico con ropero y estantes blanco y madera ELIE</p>
+                <p class="precio">$ 495.000</p>
+            </div>
+        </div>
+    </section>
+    <section></section>
+    <section id="Contacto">
+        <h3 class="seccion"> Contactanos! </h3>
+        <form action="#" method="post">
+            <div class="form-row">
+                <div class="col-4">
+                <label for="nombre">Nombre y Apellido<span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" required></div>
+            </div>
+            <div class="form-row">
+                <div class="col-4">
+                <label for="correo" required>Correo electrónico<span class="required">*</span></label>
+                <input type="email" id="correo" name="correo" required></div>
+            </div>
 
-                <button type="submit">Enviar </button>
-              </form>
-        </section>
-    </header>
+            <div class="form-row">
+                <div class="col-4">
+                <label for="asunto" required>Asunto<span class="required">*</span></label>
+                <input type="text" id="asunto" name="asunto" required></div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-4">
+                <label for="mensaje" required>Mensaje<span class="required">*</span></label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Hola, Estilo Vivo Muebles! Les quiero consultar por ..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit">Enviar </button>
+        </form>
+    </section>
+    
 
     <footer class="bg-lightbrown text-center p-3">
         <p>&copy; Todos los derechos reservados, 2024</p>
