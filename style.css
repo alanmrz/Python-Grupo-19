@@ -3,16 +3,32 @@
     color: #000000; 
    
 }
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 100px; 
+    width: auto;
+    margin-right: 20px; 
+}
+
+.textos-header {
+    text-align: center;
+}
+
 .titulo {
     font-size: 46px;
     color: #333;
-    text-align: center;
     font-family: "Montserrat", sans-serif;
 }
 
 .subtitulo {
     font-size: 28px;
-    font-family:'Cedarville Cursive', cursive;
+    font-family: 'Cedarville Cursive', cursive;
 }
 
 .nav-custom {
@@ -28,20 +44,23 @@
 
 .divisor {
     color: grey;
-    width: 18%;
+    width: 78%;
     margin: 6px auto !important;
+
+
 }
 
 .seccion {
-    text-align: left;
+    text-align: center;
     padding-bottom: 23px;
     font-size: 40px;
     font-family: "Montserrat", sans-serif;
     
+    
 }
 
 
-.form-row { 
+.form-row .col-4 { 
     text-align: left;
     align-items: center;
     justify-content: center;
@@ -64,9 +83,19 @@
     vertical-align: middle; 
 }
 
+#Contacto {
+    padding-bottom: 35px;
+    padding-top: 35px;
+}
+
 input[type="text"],
 
 input[type="email"],
+
+input[type="number"],
+
+select,
+
 textarea {
   width: 100%;
   margin: 1px 0px 1px 0px;
@@ -83,6 +112,7 @@ input[type="submit"] {
   background-color: #d1a573;
   color: white;
   cursor: pointer;
+  align-self: center;
     
 }
 
@@ -92,18 +122,70 @@ input[type="submit"]:hover {
     
 }
 
- 
- 
 
-  /* Estilos responsivos */
-  @media (max-width: 600px) {
-    body {
-      font-size: 16px;
+
+ /* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header-custom {
+        padding: 30px;
     }
-  
-    header,
-    section,
-    footer {
-      padding: 10px;
+
+    .titulo {
+        font-size: 36px;
     }
-  }
+
+    .subtitulo {
+        font-size: 24px;
+    }
+
+    .form-row .col-4 {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Estilos para celulares */
+@media (max-width: 767px) {
+    .header-custom {
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .form-row .col-4 {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .form-check {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+/* Estilos para PC de escritorio */
+@media (min-width: 1200px) {
+    .header-custom {
+        padding: 40px;
+    }
+
+    .titulo {
+        font-size: 46px;
+    }
+
+    .subtitulo {
+        font-size: 28px;
+    }
+
+    .form-row .col-4 {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
