@@ -123,6 +123,86 @@ input[type="submit"]:hover {
 }
 
 
+ 
+#titulo-lista {
+    padding: 10px;
+    font-weight: lighter;
+    background-color: #102C57;
+    color: #FEFAF6;
+    font-family: "Montserrat", sans-serif;
+}
+.contenedor {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    border: none;
+    width: 25%;
+    position: relative;  
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.imagen {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.imagen img{
+    width: 100%;
+    display: block;
+}
+
+.imagen img:last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.card:hover .imagen img:last-child {
+    opacity: 1;
+}
+
+.card p{
+    text-align: center;
+}
+
+.titulo-producto{
+    margin: 10px 20px;
+    font-family: Cambria;
+}
+
+.precio {
+    letter-spacing: 1px;
+    font-weight: bold;
+    
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+    .card {
+        width: 33.33%; /* 3 tarjetas por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 50%; /* 2 tarjetas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* 1 tarjeta por fila en pantallas muy pequeñas */
+    }
+}
+
+
 
  /* Estilos para tablets */
 @media (min-width: 768px) and (max-width: 1199px) {
