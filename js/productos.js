@@ -27,9 +27,9 @@ const muebles = [
                     }
                 ]
 
-// contenedor.innerHTML= ""
 
-muebles.forEach(mueble => {
+
+function cargar(){muebles.forEach(mueble => {
                             contenedor.innerHTML+= 
                             `<div class="card">
                             <div class="imagen">
@@ -42,4 +42,35 @@ muebles.forEach(mueble => {
                             <p class="precio">$ ${mueble.precio}.000</p>
                         </div>`
                         }
-                        )
+                        )}
+
+cargar()
+let search = document.getElementById("buscarProd")
+
+search.addEventListener('input',()=>{
+    let filtro = search.value.toLowerCase()
+    if(filtro == ""){
+        contenedor.innerHTML= ""
+        cargar()
+        
+    }
+    else{
+        contenedor.innerHTML= ""
+        muebles.forEach(mueble => {
+            if(mueble.nombre.toLowerCase().includes(filtro)){
+            contenedor.innerHTML+= 
+            `<div class="card">
+            <div class="imagen">
+                <a href="./productos/producto${mueble.img}.html">
+                    <img src="./img/Producto ${mueble.img}/0${muebles[0].img}.jpg" alt="">
+                    <img src="./img/Producto ${mueble.img}/0${muebles[0].img+1}.jpg" alt="">
+                </a>
+            </div>
+            <p class="titulo-producto">${mueble.nombre}</p>
+            <p class="precio">$ ${mueble.precio}.000</p>
+        </div>`
+            }
+        }
+        )
+    }
+})
