@@ -7,6 +7,11 @@
     <title>Mueblería Estilo Vivo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <!--BOOTSTRAP ALAN  -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--BOOTSTRAP ALAN  -->
     <!-- googleFont -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,14 +27,14 @@
                 </li>
                 <li class="nav-item">
 
-                <a class="nav-link" href="#Productos">Productos</a>
+                <a class="nav-link" href="/Productos.html">Productos</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">Nosotros</a>
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Contacto">Contacto</a>
+                    <a class="nav-link" href="Main.html#Contacto">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -44,62 +49,51 @@
                 <h2 class="subtitulo">Muebles de diseño</h2>
             </div>
         </div>
-    </header>  
-    <section id="Productos">
-        <h2 id="titulo-lista">Lista de Productos</h2>
-        <div class="contenedor">
-            <div class="card">
-                <div class="imagen">
-                    <a href="./productos/producto1.html">
-                        <img src="./img/Producto 1/01.jpg" alt="">
-                        <img src="./img/Producto 1/02.jpg" alt="">
-                    </a>
-                </div>
-                <p class="titulo-producto">Armario blanco con ropero y estantes ANTONIN</p>
-                <p class="precio">$ 554.000</p>
-            </div>
-            <div class="card">
-                <div class="imagen">
-                    <a href="./productos/producto2.html">
-                        <img src="./img/Producto 2/01.jpg" alt="">
-                        <img src="./img/Producto 2/02.jpg" alt="">
-                    </a>
-                </div>
-                <p class="titulo-producto">Armario industrail mango INDUSTRIA</p>
-                <p class="precio">$ 872.000</p>
-            </div>
-            <div class="card">
-                <div class="imagen">
-                    <a href="./productos/producto3.html">
-                        <img src="./img/Producto 3/01.jpg" alt="">
-                        <img src="./img/Producto 3/02.jpg" alt="">
-                    </a>
-                </div>
-                <p class="titulo-producto">Armario colgador nórdico blanco y madera clara KELMA</p>
-                <p class="precio">$ 663.000</p>
-            </div>
-            <div class="card">
-                <div class="imagen">
-                    <a href="./productos/producto4.html">
-                        <img src="./img/Producto 4/01.jpg" alt="">
-                        <img src="./img/Producto 4/02.jpg" alt="">
-                    </a>
-                </div>
-                <p class="titulo-producto">Armario nórdico acabado roble claro MAHE</p>
-                <p class="precio">$ 790.000</p>
-            </div>
-            <div class="card">
-                <div class="imagen">
-                    <a href="./productos/producto5.html">
-                        <img src="./img/Producto 5/01.jpg" alt="">
-                        <img src="./img/Producto 5/02.jpg" alt="">
-                    </a>
-                </div>
-                <p class="titulo-producto">Armario nórdico con ropero y estantes blanco y madera ELIE</p>
-                <p class="precio">$ 495.000</p>
-            </div>
+    </header>
+    <!---------------------------------------------- CARRUSEL ALAN ---------------------------------------------->
+    <!---------------------------------------------- CARRUSEL ALAN ---------------------------------------------->
+    <!---------------------------------------------- CARRUSEL ALAN ---------------------------------------------->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="true" >
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </section>
+        <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <img src="/img/Producto 1/04.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>ANTONIN</h5>
+              <p>Muebles de diseño.</p>
+            </div>
+          </div>
+          <div class="carousel-item" >
+            <img src="/img/Producto 2/04.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>INDUSTRIA</h5>
+              <p>Muebles de diseño.</p>
+            </div>
+          </div>
+          <div class="carousel-item" >
+            <img src="/img/Producto 3/03.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>KELMA</h5>
+              <p>Muebles de diseño.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!---------------------------------------------- CARRUSEL ALAN ---------------------------------------------->
+    <!---------------------------------------------- CARRUSEL ALAN ---------------------------------------------->
+    <!---------------------------------------------- CARRUSEL ALAN ---------------------------------------------->
     <section></section>
     <section id="Contacto">
         <h3 class="seccion">Contactanos!</h3>
@@ -156,7 +150,7 @@
             </div>
         </form>
     </section>
-    
+
 
 
     <footer class="bg-lightbrown text-center p-3">
@@ -164,23 +158,5 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault(); 
-                
-                var nombre = document.getElementById('nombre').value;
-                var correo = document.getElementById('correo').value;
-                var asunto = document.getElementById('asunto').value;
-                var mensaje = document.getElementById('mensaje').value;
-
-                if (!nombre || !correo || !asunto || !mensaje) {
-                    alert('Por favor, completa todos los campos.');
-                } else {
-                    alert('Tu consulta se envió correctamente. Nos estaremos comunicando con vos en breve');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
