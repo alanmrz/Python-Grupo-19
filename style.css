@@ -269,3 +269,10 @@ input[type="submit"]:hover {
         margin: 0 auto;
     }
 }
+
+
+/* CARRUSEL */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
