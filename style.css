@@ -53,12 +53,23 @@
 .seccion {
     text-align: center;
     padding-bottom: 23px;
+    padding-top: 25px;
     font-size: 40px;
     font-family: "Montserrat", sans-serif;
     
     
 }
 
+.nosotros {
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color:black ;
+    padding: 35px 10px 6px 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
 
 .form-row .col-4 { 
     text-align: left;
@@ -83,10 +94,7 @@
     vertical-align: middle; 
 }
 
-#Contacto {
-    padding-bottom: 35px;
-    padding-top: 35px;
-}
+
 
 input[type="text"],
 
