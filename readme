@@ -1,0 +1,35 @@
+# Proyecto Django: Mueblería
+
+## Pasos para levantar el proyecto
+
+### 1. Descargar VS Code o cualquier editor de código
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+### 2. Descargar Python
+
+- [Python](https://www.python.org/downloads/)
+
+### 3. Abrir el proyecto en VS Code
+
+1. Abre VS Code.
+2. Selecciona `File` > `Open Folder` y elige la carpeta del proyecto.
+
+### 4. Abrir la terminal en VS Code
+
+1. Ve a `View` > `Terminal`.
+2. Navega hasta la carpeta del proyecto `muebleria` usando el comando `ls` y `cd`. Asegúrate de estar en la misma carpeta donde se encuentra el archivo `manage.py`.
+
+### 5. Instalar Django y Pillow
+
+En la terminal, ejecuta los siguientes comandos:
+
+```bash
+pip install django
+pip install pillow
+6. Base de datos
+Estamos usando la base de datos por defecto de Django, SQLite. Los comandos makemigrations y migrate ya han sido ejecutados.
+
+7. Levantar el servidor local
+Para levantar la página en tu servidor local, ejecuta el siguiente comando en la terminal:
+python manage.py runserver
