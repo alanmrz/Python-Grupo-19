@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Productos - Mueblería Estilo Vivo{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/productos.css' %}">
+<div class="container">
+   <!-- Búsqueda de productos -->
+    <div class="row mb-4">
+        <div class="col-12 col-md-8 col-lg-6 mx-auto"> 
+            <div class="input-group input-group-lg"> 
+                <input type="search" id="buscarProd" placeholder="Buscar productos" class="form-control" oninput="buscarProducto()">
+               
+            </div>
+        </div>
+    </div>
+    
+    
+   <!-- Título de la sección -->
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="display-4">Nuestros productos</h2>
+        </div>
+    </div>
+    
+   <!-- Contenedor de productos -->
+    <div id="contenedorProductos" class="mt-4">
+        {% for producto in productos %}
+        <div class="row product-row mb-5">
+            <div class="col-md-4">
+                <img src="{{ producto.imagen.url }}" class="img-fluid rounded" alt="{{ producto.nombre }}">
+            </div>
+            <div class="col-md-8">
+                <h4 class="product-title">{{ producto.nombre }}</h4>
+                <p class="product-description">{{ producto.descripcion }}</p>
+                <p class="product-price"><strong>Precio: ${{ producto.precio }}</strong></p>
+                <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="button" style="height: 38px;" onclick="decrementar('{{ producto.id }}')">➖</button>
+                    <input type="text" class="form-control text-center" style="height: 38px;" id="cantidad_{{ producto.id }}" value="1" readonly>
+                    <button class="btn btn-outline-secondary" type="button" style="height: 38px;" onclick="incrementar('{{ producto.id }}')">➕</button>
+                </div>
+                
+                <div class="btn-group" role="group">
+                    <button class="btn btn-primary" onclick="agregarACarrito('{{ producto.id }}')">Agregar al carrito</button>
+                    <a href="{% url 'ver_carrito' %}" class="btn btn-success">Ir al carrito</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+//    buscador
+    function buscarProducto() {
+        let input = document.getElementById('buscarProd');
+        let filter = input.value.toUpperCase();
+        let productRows = document.querySelectorAll('.product-row');
+        productRows.forEach(row => {
+            let title = row.querySelector('.product-title').textContent.toUpperCase();
+            if (title.indexOf(filter) > -1) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+// agregar
+    function incrementar(id) {
+        let cantidadInput = document.getElementById('cantidad_' + id);
+        let cantidad = parseInt(cantidadInput.value);
+        cantidadInput.value = cantidad + 1;
+    }
+
+    function decrementar(id) {
+        let cantidadInput = document.getElementById('cantidad_' + id);
+        let cantidad = parseInt(cantidadInput.value);
+        if (cantidad > 1) {
+            cantidadInput.value = cantidad - 1;
+        }
+    }
+
+    function agregarACarrito(id) {
+        let cantidad = document.getElementById('cantidad_' + id).value;
+        window.location.href = `/agregar_a_carrito/${id}/${cantidad}/`;
+    }
+</script>
+{% endblock %}

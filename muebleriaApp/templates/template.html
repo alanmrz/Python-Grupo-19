@@ -1,0 +1,98 @@
+
+{% extends 'base.html' %}
+ <!-- Vinculación del archivo CSS -->
+{% load static %}
+{% block title %}
+    Mueblería Estilo Vivo - Contacto
+
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="nosotros">
+    <h2 class="text-center my-4">¡Armá la casa de tus sueños!</h2>
+    <p>Explorá nuestra colección única de muebles, fabricados con los mejores materiales para garantizar durabilidad y estilo duradero. En Estilo Vivo, creemos que tu hogar es tu santuario personal, y nuestros muebles están diseñados para reflejar tu gusto único.</p>
+</div>
+
+<!-- Carrusel de productos destacados -->
+<div id="carouselDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/Producto1.jpg' %}" class="d-block w-100" alt="Mueble Antonin">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>ANTONIN</h5>
+                <p>Muebles de diseño único.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/Producto2.jpg' %}" class="d-block  w-100" alt="Mueble Industria">
+            <div class="carousel-caption d-none d-md-block ">
+                <h5>INDUSTRIA</h5>
+                <p>Estilo y funcionalidad.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/Producto3.jpg' %}" class="d-block  w-100" alt="Mueble Kelma">
+            <div class="carousel-caption d-none d-md-block ">
+                <h5>KELMA</h5>
+                <p>Elegancia contemporánea.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+   <!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button> -->
+</div>
+
+<!-- Sección de contacto -->
+<section id="Contacto" class="contact-form py-5 bg-light mt-5">
+    <div class="container">
+        <h4 class="text-center mb-4">¡Contactanos!</h4>
+        <form id="contactForm" action="#" method="post">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="nombre" class="form-label">Nombre y Apellido<span class="required">*</span></label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="correo" class="form-label">Correo Electrónico<span class="required">*</span></label>
+                    <input type="email" class="form-control" id="correo" name="correo" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="tel" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="tel" name="tel">
+            </div>
+            <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto<span class="required">*</span></label>
+                <select class="form-select" id="asunto" name="asunto" required>
+                    <option value="envio">Envío a domicilio</option>
+                    <option value="demora">Tiempos de demora</option>
+                    <option value="precios">Precios</option>
+                    <option value="otro" selected>Otro</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje<span class="required">*</span></label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Hola, Estilo Vivo Muebles! Les quiero consultar por ..." required></textarea>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="suscripcion" name="suscripcion">
+                <label class="form-check-label" for="suscripcion">Deseo recibir noticias y promociones</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Editar Cantidad</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" class="form-control" id="cantidad" name="cantidad" value="{{ item.cantidad }}" min="1">
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Guardar</button>
+        <a href="{% url 'ver_carrito' %}" class="btn btn-secondary mt-3">Cancelar</a>
+    </form>
+</div>
+{% endblock %}
