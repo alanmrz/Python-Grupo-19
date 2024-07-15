@@ -3,7 +3,7 @@ let productos = []
 
 async function cargarProductos() {
     try {
-        let response = await fetch('alanmrz94.pythonanywhere.com/productos');
+        let response = await fetch('https://alanmrz94.pythonanywhere.com/productos');
         if (!response.ok) {
             throw new Error('Error al obtener los productos');
         }
