@@ -1,76 +1,54 @@
-let contenedor = document.getElementById("contenedorProductos")
-const muebles = [
-                    {
-                    "nombre":"Armario blanco con ropero y estantes ANTONIN",
-                    "img": 1,
-                    "precio":554.000
-                    },
-                    {
-                    "nombre":"Armario industrail mango INDUSTRIA",
-                    "img": 2,
-                    "precio":872.000
-                    },
-                    {
-                    "nombre":"Armario colgador nórdico blanco y madera clara KELMA",
-                    "img": 3,
-                    "precio":663.000
-                    },
-                    {
-                    "nombre":"Armario nórdico acabado roble claro MAHE",
-                    "img": 4,
-                     "precio":790.000
-                    },
-                    {
-                    "nombre":"Armario nórdico con ropero y estantes blanco y madera ELIE",
-                    "img": 5,
-                    "precio":495.000
-                    }
-                ]
+let contenedor = document.getElementById("contenedorProductos");
+let productos = []
 
-
-
-function cargar(){muebles.forEach(mueble => {
-                            contenedor.innerHTML+= 
-                            `<div class="card">
-                            <div class="imagen">
-                                <a href="./productos/producto${mueble.img}.html">
-                                    <img src="./img/Producto ${mueble.img}/0${muebles[0].img}.jpg" alt="">
-                                    <img src="./img/Producto ${mueble.img}/0${muebles[0].img+1}.jpg" alt="">
-                                </a>
-                            </div>
-                            <p class="titulo-producto">${mueble.nombre}</p>
-                            <p class="precio">$ ${mueble.precio}.000</p>
-                        </div>`
-                        }
-                        )}
-
-cargar()
-let search = document.getElementById("buscarProd")
-
-search.addEventListener('input',()=>{
-    let filtro = search.value.toLowerCase()
-    if(filtro == ""){
-        contenedor.innerHTML= ""
-        cargar()
-        
-    }
-    else{
-        contenedor.innerHTML= ""
-        muebles.forEach(mueble => {
-            if(mueble.nombre.toLowerCase().includes(filtro)){
-            contenedor.innerHTML+= 
-            `<div class="card">
-            <div class="imagen">
-                <a href="./productos/producto${mueble.img}.html">
-                    <img src="./img/Producto ${mueble.img}/0${muebles[0].img}.jpg" alt="">
-                    <img src="./img/Producto ${mueble.img}/0${muebles[0].img+1}.jpg" alt="">
-                </a>
-            </div>
-            <p class="titulo-producto">${mueble.nombre}</p>
-            <p class="precio">$ ${mueble.precio}.000</p>
-        </div>`
-            }
+async function cargarProductos() {
+    try {
+        let response = await fetch('alanmrz94.pythonanywhere.com/productos');
+        if (!response.ok) {
+            throw new Error('Error al obtener los productos');
         }
-        )
+        productos = await response.json();
+        productos.forEach(producto => {
+            contenedor.innerHTML += `
+                <div class="card">
+                    <div class="imagen">
+                        <a href="./productos/producto${producto.id}.html">
+                            <img src="/static/imagenes/0${producto.img}.jpg" alt="">
+                            <img src="/static/imagenes/0${producto.img}.jpg" alt="">
+                        </a>
+                    </div>
+                    <p class="titulo-producto">${producto.nombre}</p>
+                    <p class="precio">$ ${producto.precio}</p>
+                </div>`;
+        });
+    } catch (error) {
+        console.error('Error:', error);
     }
-})
+}
+
+cargarProductos();
+
+let search = document.getElementById("buscarProd");
+
+search.addEventListener('input', () => {
+    let filtro = search.value.toLowerCase();
+    contenedor.innerHTML = "";
+    if (filtro == "") {
+        cargarProductos();
+    } else {
+        productos.forEach(producto => {
+            if (producto.nombre.toLowerCase().includes(filtro)) {
+                contenedor.innerHTML += `
+                    <div class="card">
+                        <div class="imagen">
+                            <a href="./productos/producto${producto.id}.html">
+                                <img src="./static/imagenes/0${producto.img}" alt="">
+                            </a>
+                        </div>
+                        <p class="titulo-producto">${producto.nombre}</p>
+                        <p class="precio">$ ${producto.precio}</p>
+                    </div>`;
+            }
+        });
+    }
+});
